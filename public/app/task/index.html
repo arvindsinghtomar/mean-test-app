@@ -1,0 +1,15 @@
+<div>
+    <h2> Task list</h2>
+    <hr/>
+    <b>{{vm.name}}</b>
+    <table cellpadding="10" cellspacing="0" border="1">
+        <tr>
+            <td>Name</td>
+            <td>Message</td>
+        </tr>
+        <tr ng-repeat="o in vm.tasks">
+            <td>{{o.name}}</td>
+            <td>{{o.message}}</td>
+        </tr>
+    </table>
+</div>
