@@ -19,4 +19,8 @@ router.route('/')
 
     .get(taskCtrl.getAll);
 
+router.route('/:id')
+
+    .delete(taskCtrl.remove);
+
 module.exports = router;
