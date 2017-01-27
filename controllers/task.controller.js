@@ -26,4 +26,14 @@ function getAll(req, res, next) {
         });
 }
 
-module.exports = {create, getAll};
+function remove(req, res, next) {
+    return Task.remove({_id: req.params.id})
+        .then(function (task) {
+            return res.send({message: 'Successfully deleted.'});
+        })
+        .catch(function (e) {
+            next(e);
+        });
+}
+
+module.exports = {create, getAll, remove};
