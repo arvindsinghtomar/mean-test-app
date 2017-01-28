@@ -6,7 +6,8 @@
     function apiService($http) {
         var service = {
             getAll: getAll,
-            deleteRecord: deleteRecord
+            deleteRecord: deleteRecord,
+            addRecord: addRecord
         };
 
         return service;
@@ -17,6 +18,10 @@
 
         function deleteRecord(url, id, onSuccess, onError) {
             return $http.delete(url + '/' + id).then(onSuccess).catch(onError);
+        }
+
+        function addRecord(url, data, onSuccess, onError) {
+            return $http.post(url, data).then(onSuccess).catch(onError);
         }
     }
 })();
