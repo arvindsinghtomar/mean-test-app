@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  angular.module('app', ['ui.router', 'ngResource','app.services','ui.bootstrap']);
+  angular.module('app', ['ui.router', 'ngResource','app.services','ui.bootstrap','ngAnimate']);
   angular.module('app')
     .constant('urls', {
         BASE: 'http://localhost:3000',
